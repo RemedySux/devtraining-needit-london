@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="hasLabels=true,live_feed=true" audit="true" label="TaskTaskTable" max_length="40" name="x_58872_needit_tasktask_label" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Newfield" max_length="40" name="newfield" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" default="LJ" display="true" label="TaskCaller" max_length="40" name="taskcaller" reference="sys_user" type="string">
+            <choice/>
+        </element>
+        <element label="TaskName" max_length="40" name="taskname" type="string"/>
+        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" choice="1" default="50" label="TaskPriority" max_length="20" name="taskpriority" type="currency">
+            <choice>
+                <element inactive_on_update="false" label="0" value="0"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="New Due Date" max_length="40" name="u_due_date_1" type="due_date"/>
+    </element>
+</database>
